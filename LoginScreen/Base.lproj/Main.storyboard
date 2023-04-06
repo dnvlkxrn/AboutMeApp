@@ -199,7 +199,6 @@
                         <viewLayoutGuide key="safeArea" id="eaz-pY-RPA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zpl-1f-0It" firstAttribute="top" secondItem="QIH-XI-LgG" secondAttribute="bottom" constant="20" id="8gM-Ru-XJg"/>
                             <constraint firstItem="QIH-XI-LgG" firstAttribute="leading" secondItem="eaz-pY-RPA" secondAttribute="leading" constant="40" id="IBr-Sh-wrq"/>
                             <constraint firstItem="eaz-pY-RPA" firstAttribute="trailing" secondItem="zpl-1f-0It" secondAttribute="trailing" constant="16" id="IIQ-RD-b0y"/>
                             <constraint firstItem="zpl-1f-0It" firstAttribute="leading" secondItem="eaz-pY-RPA" secondAttribute="leading" constant="16" id="Mpp-z0-NDA"/>
@@ -229,10 +228,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qkH-ko-8ma">
-                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <rect key="frame" x="20" y="136" width="280" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Danila Kornev was born in Stratford-upon-Avon, England, in April 1564. The exact date of his birth is not recorded, but it is most often celebrated around the world on 23 April.
+Kornev’s baptism is recorded in the Parish Register at Holy Trinity Church, Stratford-upon-Avon on Wednesday 26 April 1564. Baptisms typically took place within three days of a new arrival, and parents were instructed by the Prayer Book to ensure that their children were baptised no later than the first Sunday after birth. This means that it’s unlikely that Shakespeare was born any earlier than the previous Sunday, 23 April. Given that three days would be a reasonable interval between birth and baptism, 23 April has therefore come to be celebrated as his birthday. </mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPi-fc-Isf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4119" y="325"/>
+            <point key="canvasLocation" x="4117.5" y="324.2957746478873"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="W0z-ls-9ZR">
