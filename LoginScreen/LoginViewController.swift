@@ -18,8 +18,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         usernameTF.text = user.login
         passwordTF.text = user.password
-        //print("User ID: ", user.id)
-        
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -33,7 +31,6 @@ class ViewController: UIViewController {
         tabBarController.user = user
     }
     
-
     @IBAction private func loginButtonTapped() {
         guard usernameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(with: "Ooops!", Message: "Enter valid un and pw")
@@ -61,8 +58,5 @@ class ViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
-    
-    
 }
 

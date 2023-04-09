@@ -18,7 +18,6 @@ class TabBarViewController: UITabBarController {
         transferData()
     }
     
-    
     private func transferData() {
         guard let viewControllers else { return }
         viewControllers.forEach {
@@ -30,10 +29,7 @@ class TabBarViewController: UITabBarController {
                     return
                 }
                 userInfoVC.user = user
-                
             }
         }
-        //viewControllers.forEach {
-        //guard let
     }
 }

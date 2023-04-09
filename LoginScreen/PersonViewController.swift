@@ -16,7 +16,8 @@ class PersonViewController: UIViewController {
     @IBOutlet var ageLabel: UILabel!
     @IBOutlet var companyLabel: UILabel!
     @IBOutlet var positionLabel: UILabel!
-    @IBOutlet var userPhoto: String!
+    @IBOutlet var userPhoto: UIImageView!
+    @IBOutlet var titlePVC: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +26,15 @@ class PersonViewController: UIViewController {
         ageLabel.text = "Age: \(user.person.age)"
         companyLabel.text = "Company: \(user.person.company)"
         positionLabel.text = "Position: \(user.person.position)"
-        userPhoto = user.person.photo
-        
-        
+        userPhoto.image = UIImage(named: String(user.person.photo))
+        userPhoto.layer.cornerRadius = userPhoto.frame.height / 2
+        titlePVC.title = user.person.fullName
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let bioVC = segue.destination as? BiographyViewController else { return }
+        bioVC.user = user
+    }
 }
 
 

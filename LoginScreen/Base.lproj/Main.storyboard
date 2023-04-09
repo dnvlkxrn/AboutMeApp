@@ -190,9 +190,9 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QIH-XI-LgG">
-                                <rect key="frame" x="85" y="105" width="150" height="150"/>
+                                <rect key="frame" x="85" y="110.5" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="QIH-XI-LgG" secondAttribute="height" multiplier="30:19" id="I2Q-IQ-fbe"/>
+                                    <constraint firstAttribute="width" secondItem="QIH-XI-LgG" secondAttribute="height" multiplier="1:1" id="Eh4-kV-ah6"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -204,7 +204,9 @@
                             <constraint firstItem="zpl-1f-0It" firstAttribute="leading" secondItem="eaz-pY-RPA" secondAttribute="leading" constant="16" id="Mpp-z0-NDA"/>
                             <constraint firstItem="eaz-pY-RPA" firstAttribute="trailing" secondItem="QIH-XI-LgG" secondAttribute="trailing" constant="85" id="Nwh-dF-G6w"/>
                             <constraint firstItem="eaz-pY-RPA" firstAttribute="bottom" secondItem="zpl-1f-0It" secondAttribute="bottom" constant="20" id="USM-4Z-hVX"/>
-                            <constraint firstItem="QIH-XI-LgG" firstAttribute="top" secondItem="eaz-pY-RPA" secondAttribute="top" constant="12.5" id="oX0-fv-gLi"/>
+                            <constraint firstItem="QIH-XI-LgG" firstAttribute="centerX" secondItem="2Hg-pn-VY9" secondAttribute="centerX" id="XSG-WF-UTc"/>
+                            <constraint firstItem="zpl-1f-0It" firstAttribute="top" secondItem="QIH-XI-LgG" secondAttribute="bottom" constant="20" id="jLF-4j-yK2"/>
+                            <constraint firstItem="QIH-XI-LgG" firstAttribute="top" secondItem="eaz-pY-RPA" secondAttribute="top" constant="18" id="oX0-fv-gLi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Name Surname" id="Sf4-8Z-Moj">
@@ -220,6 +222,8 @@
                         <outlet property="nameLabel" destination="2u9-Ko-330" id="enG-x5-Z7q"/>
                         <outlet property="positionLabel" destination="Slu-UL-2ix" id="D6z-56-oMN"/>
                         <outlet property="surnameLabel" destination="iaO-t5-lfX" id="Cih-3o-v7V"/>
+                        <outlet property="titlePVC" destination="Sf4-8Z-Moj" id="KWz-Nh-oFr"/>
+                        <outlet property="userPhoto" destination="QIH-XI-LgG" id="Gvk-8B-rgg"/>
                         <outlet property="view" destination="iaO-t5-lfX" id="Bzp-zs-Bif"/>
                     </connections>
                 </viewController>
@@ -251,6 +255,10 @@
                     <navigationItem key="navigationItem" title="Name Surname Bio" leftItemsSupplementBackButton="YES" id="Pog-MJ-3f7">
                         <barButtonItem key="backBarButtonItem" title="Danila Kornev" id="xAt-oX-2GK"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textBio" destination="qkH-ko-8ma" id="VJW-SQ-z7d"/>
+                        <outlet property="titleBVC" destination="Pog-MJ-3f7" id="Vw4-QW-xZr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPi-fc-Isf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

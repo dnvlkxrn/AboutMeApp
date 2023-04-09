@@ -18,7 +18,8 @@ class WelcomeScreenViewController: UIViewController {
         super.viewDidLoad()
         
         greetingLabel.text = """
-        Welcome, Alexey! My name is \(user.person.fullName).
+        Welcome, \(user.login)!
+        My name is \(user.person.fullName).
         """
     }
     
