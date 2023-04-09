@@ -8,6 +8,7 @@
 import UIKit
 
 class WelcomeScreenViewController: UIViewController {
+    var user: User!
     
     @IBOutlet var greetingLabel: UILabel!
     
@@ -16,14 +17,9 @@ class WelcomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let greeting = self.greeting else { return }
-        greetingLabel.text = "Welcome,Alexey. My name is \(greeting)"
-
+        greetingLabel.text = """
+        Welcome, Alexey! My name is \(user.person.fullName).
+        """
     }
     
-
-    @IBAction func logOutTapped() {
-        dismiss(animated: true)
-    }
-        
 }

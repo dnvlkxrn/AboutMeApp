@@ -12,8 +12,13 @@ class ViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    let user = User.getUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameTF.text = user.login
+        passwordTF.text = user.password
+        //print("User ID: ", user.id)
         
     }
 
@@ -23,29 +28,26 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //guard let destination = segue.destination as? WelcomeScreenViewController else { return }
-        guard let tabBarController = segue.destination as? UITabBarController else { return }
-        guard let viewControllers = tabBarController.viewControllers else { return }
-        viewControllers.forEach { viewController in
-            if let welcomeVC = viewController as? WelcomeScreenViewController {
-                welcomeVC.greeting = usernameTF.text
-            }
-        }
-        //destination.greeting = usernameTF.text!
+        
+        guard let tabBarController = segue.destination as? TabBarViewController else { return }
+        tabBarController.user = user
     }
+    
 
     @IBAction private func loginButtonTapped() {
-        if usernameTF.text != "qwerty" || passwordTF.text != "123456" {
-            showAlert(with: "Wrong username of password!", andMessage: "Please, enter valid username and password")
+        guard usernameTF.text == user.login, passwordTF.text == user.password else {
+            showAlert(with: "Ooops!", Message: "Enter valid un and pw")
+            passwordTF.text = ""
+            return
         }
     }
     
     @IBAction private func forgotUsernameButtonTapped() {
-        showAlert(with: "Valid username", andMessage: "qwerty")
+        showAlert(with: "Valid username", Message: "Alexey")
     }
     
     @IBAction private func forgotPasswordButtonTapped() {
-        showAlert(with: "Valid password", andMessage: "123456")
+        showAlert(with: "Valid password", Message: "123")
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {
@@ -53,7 +55,7 @@ class ViewController: UIViewController {
         passwordTF.text = ""
     }
     
-    private func showAlert(with title: String, andMessage message: String) {
+    private func showAlert(with title: String, Message message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)

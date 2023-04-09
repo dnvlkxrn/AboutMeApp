@@ -146,15 +146,15 @@
             </objects>
             <point key="canvasLocation" x="1733" y="326"/>
         </scene>
-        <!--Danila Kornev-->
+        <!--Name Surname-->
         <scene sceneID="T1d-7o-QMq">
             <objects>
-                <viewController id="7c4-xp-l8p" sceneMemberID="viewController">
+                <viewController id="7c4-xp-l8p" customClass="PersonViewController" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Hg-pn-VY9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="zpl-1f-0It">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="zpl-1f-0It">
                                 <rect key="frame" x="16" y="280.5" width="288" height="218.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2u9-Ko-330">
@@ -175,8 +175,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Department:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1i-w7-aug">
-                                        <rect key="frame" x="0.0" y="148.5" width="96" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1i-w7-aug">
+                                        <rect key="frame" x="0.0" y="148.5" width="34.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -189,8 +189,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QIH-XI-LgG">
-                                <rect key="frame" x="40" y="108.5" width="240" height="152"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QIH-XI-LgG">
+                                <rect key="frame" x="85" y="105" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QIH-XI-LgG" secondAttribute="height" multiplier="30:19" id="I2Q-IQ-fbe"/>
                                 </constraints>
@@ -199,30 +199,38 @@
                         <viewLayoutGuide key="safeArea" id="eaz-pY-RPA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QIH-XI-LgG" firstAttribute="leading" secondItem="eaz-pY-RPA" secondAttribute="leading" constant="40" id="IBr-Sh-wrq"/>
                             <constraint firstItem="eaz-pY-RPA" firstAttribute="trailing" secondItem="zpl-1f-0It" secondAttribute="trailing" constant="16" id="IIQ-RD-b0y"/>
+                            <constraint firstItem="QIH-XI-LgG" firstAttribute="leading" secondItem="eaz-pY-RPA" secondAttribute="leading" constant="85" id="LJ5-5b-akc"/>
                             <constraint firstItem="zpl-1f-0It" firstAttribute="leading" secondItem="eaz-pY-RPA" secondAttribute="leading" constant="16" id="Mpp-z0-NDA"/>
-                            <constraint firstItem="QIH-XI-LgG" firstAttribute="top" secondItem="eaz-pY-RPA" secondAttribute="top" constant="16" id="Nng-Af-1qM"/>
+                            <constraint firstItem="eaz-pY-RPA" firstAttribute="trailing" secondItem="QIH-XI-LgG" secondAttribute="trailing" constant="85" id="Nwh-dF-G6w"/>
                             <constraint firstItem="eaz-pY-RPA" firstAttribute="bottom" secondItem="zpl-1f-0It" secondAttribute="bottom" constant="20" id="USM-4Z-hVX"/>
-                            <constraint firstItem="eaz-pY-RPA" firstAttribute="trailing" secondItem="QIH-XI-LgG" secondAttribute="trailing" constant="40" id="sek-FD-dCA"/>
+                            <constraint firstItem="QIH-XI-LgG" firstAttribute="top" secondItem="eaz-pY-RPA" secondAttribute="top" constant="12.5" id="oX0-fv-gLi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Danila Kornev" id="Sf4-8Z-Moj">
+                    <navigationItem key="navigationItem" title="Name Surname" id="Sf4-8Z-Moj">
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="OCG-dF-2ag">
                             <connections>
                                 <segue destination="jtD-Aq-Zlb" kind="show" id="ZjA-Qf-d6p"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ageLabel" destination="E1i-w7-aug" id="Da5-CJ-B1a"/>
+                        <outlet property="companyLabel" destination="uXr-zY-YFB" id="wy7-tJ-KfR"/>
+                        <outlet property="nameLabel" destination="2u9-Ko-330" id="enG-x5-Z7q"/>
+                        <outlet property="positionLabel" destination="Slu-UL-2ix" id="D6z-56-oMN"/>
+                        <outlet property="surnameLabel" destination="iaO-t5-lfX" id="Cih-3o-v7V"/>
+                        <outlet property="view" destination="iaO-t5-lfX" id="Bzp-zs-Bif"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VY7-yQ-PDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3334" y="325"/>
         </scene>
-        <!--Danila Kornev Bio-->
+        <!--Name Surname Bio-->
         <scene sceneID="uWk-LK-U1Z">
             <objects>
-                <viewController id="jtD-Aq-Zlb" sceneMemberID="viewController">
+                <viewController id="jtD-Aq-Zlb" customClass="BiographyViewController" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zo9-F3-QRa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,8 +239,7 @@
                                 <rect key="frame" x="20" y="136" width="280" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Danila Kornev was born in Stratford-upon-Avon, England, in April 1564. The exact date of his birth is not recorded, but it is most often celebrated around the world on 23 April.
-Kornev’s baptism is recorded in the Parish Register at Holy Trinity Church, Stratford-upon-Avon on Wednesday 26 April 1564. Baptisms typically took place within three days of a new arrival, and parents were instructed by the Prayer Book to ensure that their children were baptised no later than the first Sunday after birth. This means that it’s unlikely that Shakespeare was born any earlier than the previous Sunday, 23 April. Given that three days would be a reasonable interval between birth and baptism, 23 April has therefore come to be celebrated as his birthday. </mutableString>
+                                <string key="text">ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum </string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -241,18 +248,18 @@ Kornev’s baptism is recorded in the Parish Register at Holy Trinity Church, St
                         <viewLayoutGuide key="safeArea" id="4K0-BX-gSE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Danila Kornev Bio" id="Pog-MJ-3f7">
+                    <navigationItem key="navigationItem" title="Name Surname Bio" leftItemsSupplementBackButton="YES" id="Pog-MJ-3f7">
                         <barButtonItem key="backBarButtonItem" title="Danila Kornev" id="xAt-oX-2GK"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPi-fc-Isf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4117.5" y="324.2957746478873"/>
+            <point key="canvasLocation" x="4119" y="325"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="W0z-ls-9ZR">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Twr-uU-OR5" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Twr-uU-OR5" customClass="TabBarViewController" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dmI-Fe-N6O">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

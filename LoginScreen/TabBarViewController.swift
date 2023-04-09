@@ -8,22 +8,32 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
+   
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tabBar.items?.last?.title = user.person.fullName
+        
+        transferData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func transferData() {
+        guard let viewControllers else { return }
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeScreenViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                let userInfoVC = navigationVC.topViewController
+                guard let userInfoVC = userInfoVC as? PersonViewController else {
+                    return
+                }
+                userInfoVC.user = user
+                
+            }
+        }
+        //viewControllers.forEach {
+        //guard let
     }
-    */
-
 }
