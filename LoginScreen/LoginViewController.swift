@@ -48,8 +48,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {
-        usernameTF.text = ""
-        passwordTF.text = ""
+        //usernameTF.text = ""
+        //passwordTF.text = ""
     }
     
     private func showAlert(with title: String, Message message: String) {

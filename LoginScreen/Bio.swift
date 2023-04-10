@@ -15,8 +15,8 @@ struct User {
     
     static func getUser() -> User {
         User(
-            login: "User",
-            password: "Password",
+            login: "Alexey",
+            password: "123",
             person: Person.getPerson()
         )
     }
