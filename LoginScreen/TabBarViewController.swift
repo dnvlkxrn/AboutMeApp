@@ -18,7 +18,7 @@ class TabBarViewController: UITabBarController {
         transferData()
     }
     
-    private func transferData() {
+        private func transferData() {
         guard let viewControllers else { return }
         viewControllers.forEach {
             if let welcomeVC = $0 as? WelcomeScreenViewController {
@@ -32,4 +32,5 @@ class TabBarViewController: UITabBarController {
             }
         }
     }
+
 }

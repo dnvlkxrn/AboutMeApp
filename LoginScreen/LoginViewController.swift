@@ -26,9 +26,8 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         guard let tabBarController = segue.destination as? TabBarViewController else { return }
-        tabBarController.user = user
+            tabBarController.user = user
     }
     
     @IBAction private func loginButtonTapped() {
